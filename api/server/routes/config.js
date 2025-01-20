@@ -53,7 +53,8 @@ router.get('/', async function (req, res) {
         !!process.env.OPENID_SESSION_SECRET,
       openidLabel: process.env.OPENID_BUTTON_LABEL || 'Continue with OpenID',
       openidImageUrl: process.env.OPENID_IMAGE_URL,
-      serverDomain: process.env.DOMAIN_SERVER || 'https://fiad-genrivia-o1-test.hf.space/',
+      // Here is the change to your Hugging Face Space URL
+      serverDomain: process.env.DOMAIN_SERVER || 'https://fiad-genrivia-o1-test.hf.space/', 
       emailLoginEnabled,
       registrationEnabled: !ldap?.enabled && isEnabled(process.env.ALLOW_REGISTRATION),
       socialLoginEnabled: isEnabled(process.env.ALLOW_SOCIAL_LOGIN),
